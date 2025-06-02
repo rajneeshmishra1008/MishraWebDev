@@ -31,23 +31,7 @@ body {
   }
 }
 
-/* Extra Small Devices (Very small phones) */
-@media (max-width: 360px) {
-  .hero-text h2 {
-    font-size: 1.6rem;
-  }
 
-  .card {
-    flex: 1 1 100%;
-  }
-}
-
-
-.container {
-  width: 100%;
-  max-width: 1200px;
-  padding: 0 15px;
-}
 
 
 /* Header */
