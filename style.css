@@ -31,6 +31,15 @@ body {
   }
 }
 
+@media (max-width: 360px) {
+  .hero-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+}
 
 
 
