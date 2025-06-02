@@ -231,13 +231,98 @@
   </form>
   <p id="form-response" role="alert"></p>
 
-  <div class="contact-info" data-aos="fade-up" style="margin-top: 2rem; font-size: 1rem; color: #333;">
+  <div class="contact-info" data-aos="fade-up">
     <h3>Contact Details</h3>
     <p><strong>Phone:</strong> 8948277840 , 9795334608</p>
     <p><strong>Email:</strong> rm0983913@gmail.com</p>
     <p><strong>Address:</strong> B 3/89 , Pridarshani Colony , Kesav Nagar , Lucknow</p>
   </div>
 </section>
+
+<style>
+  .container.contact {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    font-family: Arial, sans-serif;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  label {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .btn-primary {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+
+  #form-response {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .contact-info {
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: #333;
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+
+  /* Responsive styles */
+  @media (max-width: 600px) {
+    .container.contact {
+      padding: 1rem;
+    }
+
+    form {
+      gap: 0.75rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      font-size: 0.95rem;
+    }
+
+    .btn-primary {
+      font-size: 0.95rem;
+    }
+
+    .contact-info {
+      font-size: 0.95rem;
+    }
+  }
+</style>
 
 <script>
   document.getElementById('contact-form').addEventListener('submit', function (e) {
@@ -258,6 +343,7 @@
     }
   });
 </script>
+
 
 
 
