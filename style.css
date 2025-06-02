@@ -605,11 +605,11 @@ nav a:hover {
     }
  
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 780px) {
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: #2b2a2a;
+    background-color: #e1dddd;
     position: absolute;
     top: 100%;
     right: 1rem;
