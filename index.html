@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Software Development Agency</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <h1 class="logo">MishraWebDev</h1>
+      <nav>
+        <ul id="nav-links" class="nav-links">
+            <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+      </nav>
+    </div>
+  </header>
+
+<section class="hero">
+  <div class="container hero-content">
+    <div class="hero-image" data-aos="fade-right">
+      <!-- Slider container -->
+      <div class="slider">
+        <img src="https://st4.depositphotos.com/12981370/24312/i/450/depositphotos_243120806-stock-photo-programmer-working-software-development-coding.jpg" alt="Software development illustration" class="slide active" />
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=450&q=80" alt="Coding on laptop" class="slide" />
+        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=450&q=80" alt="Developers collaborating" class="slide" />
+      </div>
+      <!-- Navigation arrows -->
+      <button class="slider-btn prev" aria-label="Previous image">&#10094;</button>
+      <button class="slider-btn next" aria-label="Next image">&#10095;</button>
+    </div>
+    <div class="hero-text" data-aos="fade-left">
+      <h2>Building <span>Robust Software</span> Solutions</h2>
+      <p>Websites, Mobile Apps, and Custom Software tailored for your business needs with precision and scalability.</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn-primary">🚀 View Projects</a>
+        <a href="#contact" class="btn-secondary">📞 Get Started</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-image {
+    position: relative;
+    width: 450px; /* fixed width for demo, adjust as needed */
+    height: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  .slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .slide.active {
+    opacity: 1;
+    position: relative;
+  }
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 0 10px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 3px;
+  }
+  .slider-btn.prev {
+    left: 10px;
+  }
+  .slider-btn.next {
+    right: 10px;
+  }
+  .slider-btn:focus {
+    outline: 2px solid #fff;
+  }
+</style>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const prevBtn = document.querySelector('.slider-btn.prev');
+  const nextBtn = document.querySelector('.slider-btn.next');
+  let currentIndex = 0;
+  const totalSlides = slides.length;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    showSlide(currentIndex);
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    showSlide(currentIndex);
+  }
+
+  nextBtn.addEventListener('click', nextSlide);
+  prevBtn.addEventListener('click', prevSlide);
+
+  // Auto slide every 5 seconds
+  setInterval(nextSlide, 5000);
+</script>
+
+
+<section id="about" class="container about" style="background-color: #fdf5f5;" >
+  <h2 data-aos="fade-up">About Us</h2>
+  <div class="about-content" >
+    <div class="about-text" data-aos="fade-right" style="background-color: #fffafa;" >
+      <p>
+        We are a passionate team of software developers, designers, and strategists
+        committed to delivering quality software solutions that empower businesses.
+        Our expertise spans web, mobile, and custom software development tailored to your unique needs.
+      </p>
+    </div>
+    <div class="about-image" data-aos="fade-left">
+      <img src="webdevlogo.png" alt="Our Team" />
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+
+  <section id="services" class="container services">
+    <h2 data-aos="fade-up"><center>Our Services</center></h2>
+    <div class="service-cards" style="background-color: #ccd3db; color: rgb(17, 1, 1); padding: 20px;">
+      <div class="card" data-aos="zoom-in" style="background-color: #eaeaea;">
+        <img src="https://media.istockphoto.com/id/1371339413/photo/co-working-team-meeting-concept-businessman-using-smart-phone-and-digital-tablet-and-laptop.jpg?s=612x612&w=0&k=20&c=ysEsVw3q2axYt3oVZAuQjtHRlN3lY-U_e0ikK5yKIXQ=" alt="Website Development" />
+        <h3>Website Development</h3>
+        <p>Responsive, fast, and user-friendly websites with modern technology.</p>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="100" style="background-color: #eaeaea;" >
+        <img src="https://enterpriseviewpoint.com/wp-content/uploads/2020/11/Mobile-App.png" alt="Mobile Applications" />
+        <h3>Mobile Applications</h3>
+        <p>Native & cross-platform apps with intuitive UX for iOS and Android.</p>
+      </div>
+      <div class="card" data-aos="zoom-in" data-aos-delay="200" style="background-color: #eaeaea;">
+        <img src="https://www.sphinx-solution.com/blog/wp-content/uploads/2019/06/successful-software-solutions.jpg" alt="Custom Software" />
+        <h3>Custom Software</h3>
+        <p>Tailored software solutions to solve your unique business challenges.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="projects" class="container projects">
+  <h2 data-aos="fade-up"><center><b>Recent Projects</b></center></h2>
+  <div class="project-list">
+    
+<article class="project" data-aos="fade-up" data-aos-delay="100">
+  <img src="shriram (2).png" alt="Shriram Interior Project" />
+  <div class="project-content">
+    <h3>Project One - Shriram Interior</h3>
+    <p>Creative and modern interior design solutions for residential and commercial spaces.</p>
+    <a href="https://rajneeshmishra1008.github.io/shriRamInterior/" class="btn-secondary">View Project</a>
+  </div>
+</article>
+
+   
+
+<article class="project" data-aos="fade-up" data-aos-delay="150">
+  <img src="portfolio.png" alt="Portfolio Project" />
+  <div class="project-content">
+    <h3>Project Two - Portfolio Website</h3>
+    <p>Personal portfolio website showcasing skills, projects, and professional background with a modern design.</p>
+    <a href="https://rajneeshmishra1008.github.io/My-Portfolio" class="btn-secondary">View Project</a>
+  </div>
+</article>
+
+
+  </div>
+
+</section>
+
+
+ <section id="contact" class="container contact">
+  <h2 data-aos="fade-up">Contact Us</h2>
+  <form id="contact-form" novalidate data-aos="fade-up" autocomplete="off">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+    <button type="submit" class="btn-primary">Send Message</button>
+  </form>
+  <p id="form-response" role="alert"></p>
+
+  <div class="contact-info" data-aos="fade-up" style="margin-top: 2rem; font-size: 1rem; color: #333;">
+    <h3>Contact Details</h3>
+    <p><strong>Phone:</strong> 8948277840 , 9795334608</p>
+    <p><strong>Email:</strong> rm0983913@gmail.com</p>
+    <p><strong>Address:</strong> B 3/89 , Pridarshani Colony , Kesav Nagar , Lucknow</p>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="container footer-container">
+    <div class="footer-top">
+      <div class="footer-about">
+        <h3>MishraWebDev</h3>
+        <p>Your trusted partner in delivering quality software solutions worldwide.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-follow">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/rajneeshmishra_1008/" target="_blank" aria-label="Instagram" rel="noopener"><img src="https://www.transparentpng.com/thumb/logo-instagram/z75gfy-instagram-logo-png.png" alt="Instagram" /></a>
+        </div>
+        <div class="qr-code">
+          <p>Scan to follow us:</p>
+          <img src="images/qr-code.png" alt="QR Code to follow SoftDevPro" />
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 MishraWebDev. All rights reserved.</p>
+    </div>
+  </div>
+
+  
+</footer>
+
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>
