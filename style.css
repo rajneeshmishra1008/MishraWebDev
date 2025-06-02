@@ -13,12 +13,28 @@ body {
   color: #333;
   line-height: 1.6;
 }
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+}
 
 .container {
+  width: 100%;
   max-width: 1200px;
-  margin: auto;
-  padding: 1.5rem;
+  padding: 0 15px;
 }
+
 
 /* Header */
 header {
