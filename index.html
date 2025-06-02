@@ -32,10 +32,9 @@
         <img src="https://st4.depositphotos.com/12981370/24312/i/450/depositphotos_243120806-stock-photo-programmer-working-software-development-coding.jpg" alt="Software development illustration" class="slide active" />
         <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=450&q=80" alt="Coding on laptop" class="slide" />
         <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=450&q=80" alt="Developers collaborating" class="slide" />
-
       </div>
+     
     </div>
-
     <div class="hero-text" data-aos="fade-left">
       <h2>Building <span>Robust Software</span> Solutions</h2>
       <p>Websites, Mobile Apps, and Custom Software tailored for your business needs with precision and scalability.</p>
@@ -48,21 +47,9 @@
 </section>
 
 <style>
-  .hero {
-    display: flex;
-    align-items: center;
-    padding: 2rem;
-  }
-  .hero-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-  }
   .hero-image {
     position: relative;
-    width: 450px;
+    width: 450px; /* fixed width for demo, adjust as needed */
     height: 300px;
     overflow: hidden;
     border-radius: 8px;
@@ -92,11 +79,10 @@
     border: none;
     color: white;
     font-size: 2rem;
-    padding: 5px 12px;
+    padding: 0 10px;
     cursor: pointer;
     user-select: none;
-    border-radius: 5px;
-    z-index: 1;
+    border-radius: 3px;
   }
   .slider-btn.prev {
     left: 10px;
@@ -132,8 +118,8 @@
     showSlide(currentIndex);
   }
 
-  prevBtn.addEventListener('click', prevSlide);
   nextBtn.addEventListener('click', nextSlide);
+  prevBtn.addEventListener('click', prevSlide);
 
   // Auto slide every 5 seconds
   setInterval(nextSlide, 5000);
