@@ -13,21 +13,35 @@ body {
   color: #333;
   line-height: 1.6;
 }
-@media screen and (max-width: 768px) {
-  .container {
-    padding: 10px;
+/* Small Devices (Mobiles) */
+@media (max-width: 480px) {
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  nav ul {
     flex-direction: column;
-  }
-
-  .hero-image {
-    width: 100%;
-    height: auto;
-  }
-
-  .hero-text {
-    text-align: center;
+    gap: 0.5rem;
   }
 }
+
+/* Extra Small Devices (Very small phones) */
+@media (max-width: 360px) {
+  .hero-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+}
+
 
 .container {
   width: 100%;
