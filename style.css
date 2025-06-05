@@ -561,7 +561,7 @@ textarea:focus {
     }
  
 /* Responsive */
-@media (max-width: 780px) {
+@media (max-width: 768px) {
   .nav-links {
     display: none;
     flex-direction: column;
