@@ -13,10 +13,52 @@ body {
   color: #333;
   line-height: 1.6;
 }
-/* Small Devices (Mobiles) */
-@media (max-width: 480px) {
+/* Default (Large screens & desktops) */
+.hero-text h2 {
+  font-size: 3rem; /* Big for desktop */
+}
+
+.btn-primary,
+.btn-secondary {
+  font-size: 1.1rem;
+  padding: 0.8rem 1.6rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Tablets (Portrait & Landscape) */
+@media (max-width: 1024px) {
+  .hero-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    font-size: 1rem;
+    padding: 0.7rem 1.4rem;
+  }
+}
+
+/* Small Tablets & Large Phones */
+@media (max-width: 768px) {
   .hero-text h2 {
     font-size: 2rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.8rem;
+    text-align: center;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 580px) {
+  .hero-text h2 {
+    font-size: 1.8rem;
   }
 
   .btn-primary,
@@ -31,9 +73,10 @@ body {
   }
 }
 
+/* Extra Small Devices */
 @media (max-width: 360px) {
   .hero-text h2 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   .card {
